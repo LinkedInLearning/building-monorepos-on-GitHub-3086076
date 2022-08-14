@@ -33,7 +33,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@my-libs/component",
+  "name": "@my-libs/component", 
   "author": "carlos solis",
   "module": "dist/component.esm.js",
   "size-limit": [

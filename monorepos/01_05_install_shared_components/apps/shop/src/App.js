@@ -1,10 +1,10 @@
 import './App.css';
-import {BigRedButton} from '@my-libs/component'
+import {BigRedButton} from '@my-libs/component';
 
 function App() {
   return (
     <div className="App">
-     <BigRedButton></BigRedButton>
+      <BigRedButton></BigRedButton>
     </div>
   );
 }
