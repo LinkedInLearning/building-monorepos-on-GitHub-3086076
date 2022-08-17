@@ -1,69 +1,12 @@
-name: Main workflow
-
-# Trigger Events
+name: Copy To Branches
 on:
-  push:
-    branches:
-      - main
-
-# Jobs to run
+  workflow_dispatch:
 jobs:
-  test:
+  copy-to-branches:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    env:
-      CI: true
     steps:
-      # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
-      # Install NodeJS
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      # Install and build rush
-      - name: Install dependencies
-        run: |
-          node common/scripts/install-run-rush.js change -v
-          node common/scripts/install-run-rush.js install
-          node common/scripts/install-run-rush.js build
-      # Run custom
-      - name: test code
-        run: |
-        ## node common/scripts/install-run-rush.js test
-  deploy:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    env:
-      CI: true
-    steps:
-      # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
-      # Install NodeJS
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      # Install and build rush
-      - name: Install dependencies
-        run: |
-          node common/scripts/install-run-rush.js change -v
-          node common/scripts/install-run-rush.js install
-          node common/scripts/install-run-rush.js build
-          node common/scripts/install-run-rush.js deploy --overwrite -p customers
-
-      # Run custom
-      - name: Deploy to netlify
-        uses: netlify/actions/cli@master
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY__AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
-        with:
-          args: deploy --dir=common/deploy/apps/customers --prod
-          secrets: '["DEV_NETLIFY_AUTH_TOKEN", "NETLIFY__SITE_ID"]'
+          fetch-depth: 0
+      - name: Copy To Branches Action
+        uses: planetoftheweb/copy-to-branches@v1
