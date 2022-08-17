@@ -1,0 +1,52 @@
+/**
+ * This is the main configuration file for Rush.
+ * For full documentation, please see https://rushjs.io
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.76.0",
+  "pnpmVersion": "6.7.1",
+  "pnpmOptions": {
+    "useWorkspaces": true
+  },
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0 || >=16.13.0 <17.0.0",
+  "gitPolicy": {},
+  "repository": {},
+  "eventHooks": {
+    "preRushInstall": [
+      // "common/scripts/pre-rush-install.js"
+    ],
+    "postRushInstall": [],
+    /**
+     * The list of shell commands to run before the Rush build command starts
+     */
+    "preRushBuild": [],
+    /**
+     * The list of shell commands to run after the Rush build command finishes
+     */
+    "postRushBuild": []
+  },
+  "variants": [
+    // {
+    //   /**
+    //    * The folder name for this variant.
+    //    */
+    //   "variantName": "old-sdk",
+    // 
+    //   /**
+    //    * An informative description
+    //    */
+    //   "description": "Build this repo using the previous release of the SDK"
+    // }
+  ],
+  "projects": [
+    {
+      "packageName": "customers",
+      "projectFolder": "apps/customers"
+    },
+    {
+      "packageName": "finance",
+      "projectFolder": "apps/finance"
+    }
+  ]
+}
