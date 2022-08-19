@@ -27,14 +27,14 @@ jobs:
       # Install and build rush
       - name: Install dependencies
         run: |
-          pwd
-          ## node monorepos/02_02/common/scripts/install-run-rush.js change -v
-          node monorepos/02_02/common/scripts/install-run-rush.js install
-          node monorepos/02_02/common/scripts/install-run-rush.js build
+          cd monorepos/02_02_Runing\ custom\ comands/
+          node common/scripts/install-run-rush.js change -v
+          node common/scripts/install-run-rush.js install
+          node common/scripts/install-run-rush.js build
       # Run custom
       - name: test code
         run: |
-        ## node monorepos/02_02/common/scripts/install-run-rush.js test
+          node common/scripts/install-run-rush.js test
   deploy:
     runs-on: ubuntu-latest
     strategy:
@@ -54,10 +54,11 @@ jobs:
       # Install and build rush
       - name: Install dependencies
         run: |
-          node monorepos/02_02/common/scripts/install-run-rush.js change -v
-          node monorepos/02_02/common/scripts/install-run-rush.js install
-          node monorepos/02_02/common/scripts/install-run-rush.js build
-          node monorepos/02_02/common/scripts/install-run-rush.js deploy --overwrite -p customers
+          cd monorepos/02_02_Runing\ custom\ comands/
+          node common/scripts/install-run-rush.js change -v
+          node common/scripts/install-run-rush.js install
+          node common/scripts/install-run-rush.js build
+          node common/scripts/install-run-rush.js deploy --overwrite -p customers
       # Run custom
       - name: Deploy to netlify
         uses: netlify/actions/cli@master
