@@ -27,7 +27,7 @@ jobs:
       # Install and build rush
       - name: Install dependencies
         run: |
-          cd monorepos/02_02_Runing\ custom\ comands/
+          cd monorepos/02_02_runing_custom_comands
           node common/scripts/install-run-rush.js change -v
           node common/scripts/install-run-rush.js install
           node common/scripts/install-run-rush.js build
@@ -54,7 +54,7 @@ jobs:
       # Install and build rush
       - name: Install dependencies
         run: |
-          cd monorepos/02_02_Runing\ custom\ comands/
+          cd monorepos/02_02_runing_custom_comands
           node common/scripts/install-run-rush.js change -v
           node common/scripts/install-run-rush.js install
           node common/scripts/install-run-rush.js build
@@ -66,5 +66,5 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY__AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.DEV_NETLIFY_SITE_ID }}
         with:
-          args: deploy --dir=monorepos/02_02_Runing\ custom\ comands/common/deploy/apps/customers --prod
+          args: deploy --dir=monorepos/02_02_runing_custom_comands/common/deploy/apps/customers --prod
           secrets: '["DEV_NETLIFY_AUTH_TOKEN", "NETLIFY__SITE_ID"]'
