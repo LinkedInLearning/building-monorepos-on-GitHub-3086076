@@ -34,7 +34,7 @@ jobs:
       # Run custom
       - name: test code
         run: |
-          node common/scripts/install-run-rush.js test
+          node common/scripts/install-run-rush.js testrush
   deploy:
     runs-on: ubuntu-latest
     strategy:
