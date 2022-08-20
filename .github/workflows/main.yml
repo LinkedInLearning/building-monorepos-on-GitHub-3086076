@@ -5,42 +5,13 @@ on:
   push:
     branches:
       - main
-
 # Jobs to run
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    env:
-      CI: true
-    steps:
-      # Get code from repo
-      - name: Checkout code
-        uses: actions/checkout@v1
-      # Install NodeJS
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      # Install and build rush
-      - name: Install dependencies
-        run: |
-          cd monorepos/03_06_deploy
-          node common/scripts/install-run-rush.js change -v
-          node common/scripts/install-run-rush.js install
-          node common/scripts/install-run-rush.js build
-      # Run custom
-      - name: test code
-        run: |
-          cd monorepos/03_06_deploy
-          node common/scripts/install-run-rush.js testrush
   deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [17.x]
     env:
       CI: true
     steps:
