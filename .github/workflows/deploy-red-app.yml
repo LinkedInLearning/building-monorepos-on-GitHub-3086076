@@ -17,11 +17,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
-    env:
-      CI: true
     steps:
       # Get code from repo
       - name: Checkout code
