@@ -1,0 +1,17 @@
+/**
+ * This configuration file defines custom commands for the "rush" command-line.
+ * More documentation is available on the Rush website: https://rushjs.io
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+    {
+      "commandKind": "bulk",
+      "name": "testrush",
+      "summary": "Runs tests on every project.",
+      "description": "Run the local test command on every project of the monorepo",
+      "enableParallelism": true
+    }
+  ],
+  "parameters": []
+}
