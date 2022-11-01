@@ -1,0 +1,41 @@
+name: Deploy Red App
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: ["main"]
+  pull_request:
+  
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Get code from repo
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      # Install NodeJS
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.4.1
+
+      # Install and build rush
+      - name: Install dependencies
+        run: |
+          cd monorepos/03_06_deploy
+          node common/scripts/install-run-rush.js change -v
+          node common/scripts/install-run-rush.js install
+          node common/scripts/install-run-rush.js build
+          node common/scripts/install-run-rush.js deploy --overwrite -p red-app
+
+      # Deploy
+      - name: Deploy to netlify
+        uses: netlify/actions/cli@master
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY__AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY__SITE_ID }}
