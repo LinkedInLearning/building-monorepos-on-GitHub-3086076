@@ -1,5 +1,5 @@
 # Building Monorepos on GitHub 
-This is the repository for the LinkedIn Learning course Building Monorepos on GitHub . The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course Building Monorepos on GitHub. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![Building Monorepos on GitHub ][lil-thumbnail-url]
 
