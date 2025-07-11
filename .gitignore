@@ -3,3 +3,5 @@ node_modules
 .tmp
 npm-debug.log
 **/**/common/temp
+**/**/apps/**/rush-logs
+**/**/apps/**/.rush
