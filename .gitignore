@@ -6,3 +6,5 @@ npm-debug.log
 **/**/common/config/rush
 **/**/apps/**/rush-logs
 **/**/apps/**/.rush
+**/**/libs/**/rush-logs
+**/**/libs/**/.rush
