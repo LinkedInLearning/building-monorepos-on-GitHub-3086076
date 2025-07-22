@@ -1,0 +1,16 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" 
+    directory: "/apps/customers"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: 'build'
+    open-pull-requests-limit: 5
+updates:
+  - package-ecosystem: "npm" 
+    directory: "/libs/component" 
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: 'build'
