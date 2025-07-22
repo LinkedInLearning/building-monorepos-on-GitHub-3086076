@@ -26,10 +26,6 @@
     {
       "packageName": "shop",
       "projectFolder": "apps/shop"
-    },
-    {
-      "packageName": "@my-libs/component",
-      "projectFolder": "libs/component"
     }
   ]
 }
