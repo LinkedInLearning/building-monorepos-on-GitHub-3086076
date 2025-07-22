@@ -26,5 +26,6 @@
   "liveServer.settings.donotVerifyTags": true,
   "files.associations": {
     "*.json": "jsonc"
-  }
+  },
+  "vitest.disableWorkspaceWarning": true
 }
