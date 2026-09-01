@@ -40,3 +40,28 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY__SITE_ID }}
 
     
+name: CI Workflow
+
+# Triggers: When should this action run?
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows manual triggering from the GitHub UI
+
+# Jobs: Tasks that run in parallel or sequence
+jobs:
+  build:
+    runs-on: ubuntu-latest # Runs inside a clean Ubuntu Linux container
+
+    steps:
+      # Step 1: Pull your repository code into the container
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Run terminal commands inside the environment
+      - name: Run a build test
+        run: |
+          echo "Running automated tasks for our monorepo"
+          npm install

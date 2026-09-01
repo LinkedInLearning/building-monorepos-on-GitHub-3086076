@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest",
-    "test-rush": "vitest"
+    "test-rush": "react-scripts test --watchAll=false"
   },
   "dependencies": {
     "react": "^19.1.0",

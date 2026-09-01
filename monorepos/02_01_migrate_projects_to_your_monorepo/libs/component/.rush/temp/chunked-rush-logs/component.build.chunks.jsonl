@@ -1,7 +1,9 @@
 {"kind":"O","text":"Invoking: tsdx build \n"}
 {"kind":"E","text":"@rollup/plugin-replace: 'preventAssignment' currently defaults to false. It is recommended to set this option to `true`, as the next major version will default this option to `true`.\n"}
 {"kind":"E","text":"@rollup/plugin-replace: 'preventAssignment' currently defaults to false. It is recommended to set this option to `true`, as the next major version will default this option to `true`.\n"}
-{"kind":"O","text":"⠙ Creating entry file  93%                 504ms, estimated 545ms\n"}
-{"kind":"O","text":"\u001b[2K\u001b[1A\u001b[2K\u001b[G✓ Creating entry file 506 ms\n"}
-{"kind":"O","text":"⠙ Building modules  43%                 228ms, estimated 530ms\n"}
-{"kind":"O","text":"\u001b[2K\u001b[1A\u001b[2K\u001b[G✓ Building modules 271 ms\n"}
+{"kind":"O","text":"⠙ Creating entry file  99%                 756ms, estimated 667ms\n"}
+{"kind":"O","text":"\u001b[2K\u001b[1A\u001b[2K\u001b[G✓ Creating entry file 760 ms\n"}
+{"kind":"O","text":"⠙ Building modules  20%                 182ms, estimated 924ms\n"}
+{"kind":"O","text":"\u001b[2K\u001b[1A\u001b[2K\u001b[G⠹ Building modules  67%                 616ms, estimated 924ms\n"}
+{"kind":"O","text":"\u001b[2K\u001b[1A\u001b[2K\u001b[G⠸ Building modules  75%                 696ms, estimated 924ms\n"}
+{"kind":"O","text":"\u001b[2K\u001b[1A\u001b[2K\u001b[G✓ Building modules 733 ms\n"}

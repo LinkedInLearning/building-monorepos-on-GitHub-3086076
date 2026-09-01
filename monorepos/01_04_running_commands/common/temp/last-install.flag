@@ -1,11 +1,11 @@
 {
-  "node": "20.19.0",
+  "node": "24.14.0",
   "packageManager": "pnpm",
   "packageManagerVersion": "8.15.8",
-  "rushJsonFolder": "/Users/carlos/REPOS/LIL/building-monorepos-on-GitHub-3086076/monorepos/01_04_running_commands",
+  "rushJsonFolder": "/workspaces/building-monorepos-on-GitHub-3086076/monorepos/01_04_running_commands",
   "ignoreScripts": false,
   "pnpmSync": "0.3.2",
   "npmrcHash": "51603e861d825cfc6e477630d4757bd103059b78",
-  "storePath": "/Users/carlos/REPOS/LIL/building-monorepos-on-GitHub-3086076/monorepos/01_04_running_commands/common/temp/pnpm-store",
+  "storePath": "/workspaces/building-monorepos-on-GitHub-3086076/monorepos/01_04_running_commands/common/temp/pnpm-store",
   "workspaces": true
 }

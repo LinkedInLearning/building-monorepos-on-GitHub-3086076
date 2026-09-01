@@ -16,6 +16,6 @@
   "workspaceVersions": {
     "customers": "0.0.0"
   },
-  "semverPath": "/Users/carlos/.nvm/versions/node/v20.19.0/lib/node_modules/@microsoft/rush/node_modules/semver/index.js",
-  "userPnpmfilePath": "/Users/carlos/REPOS/LIL/building-monorepos-on-GitHub-3086076/monorepos/01_04_running_commands/common/config/rush/.pnpmfile.cjs"
+  "semverPath": "/home/codespace/.rush/node-v24.14.0/rush-5.155.1/node_modules/semver/index.js",
+  "userPnpmfilePath": "/workspaces/building-monorepos-on-GitHub-3086076/monorepos/01_04_running_commands/common/config/rush/.pnpmfile.cjs"
 }
